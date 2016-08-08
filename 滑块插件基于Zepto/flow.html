@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+	<meta http-equiv="X-UA-Compitable" content="IE=edge,chrome=1">
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="format-detection" content="email=no"/>
+	<title>滑块插件</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#subnav{
+	
+	}
+	a{
+		text-decoration: none;
+	}
+	.contain{
+		width:80%;
+		margin: 0 10%;
+	}
+</style>
+<body>
+	<div class="contain">
+	<nav id="subnav" class="follow_nav com_nav follow_nav1">
+		<a href="#discover">发现</a>
+		<a href="#com_follow">关注</a>
+		<a href="#me">我的</a>
+		<span class="flow flow1" id="flow"></span>
+	</nav>
+	</div>
+	<script type="text/javascript" src="js/zepto.js"></script>
+	<script type="text/javascript" src="js/flow.js"></script>
+	<script type="text/javascript">
+		;(function($){
+			$.flow({
+				wrapId:"subnav",//整体盒子id
+				wrapColor:"orange",//wrap背景颜色
+				wrapHeight:"30px",//wrap高度
+				flowId:"flow",//滑块id
+				flowColor:"blue",//滑块颜色
+				flowHeight:"3px",//滑块高度
+				aColor:"#fff",//a字体颜色
+				aActiveColor:"blue"//点击状态下a的字体颜色
+			});
+		})(Zepto)
+			/*wrapId:"subnav",//整体盒子id
+			wrapColor:"#ccc",//wrap北京颜色
+			wrapHeight:"50px",//wrap高度
+			flowId:"flow",//滑块id
+			flowColor:"orange",//滑块颜色
+			flowHeight:"5px",//滑块高度
+			aColor:"red",//a字体颜色
+			aActiveColor:"#fff"//点击状态下a的字体颜色*/
+	</script>
+</body>
+</html>
